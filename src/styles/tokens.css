@@ -1,0 +1,74 @@
+:root {
+  /* ==========================================================================
+     COLOR TOKENS (from Colors.md: NUTRITIONIST COLOR PALETTE -> SWE ADAPTED)
+     ========================================================================== */
+  --inkwell: #0C5E8A;
+  --inkwell-dark: #08405E;
+  --inkwell-deep: #052A3F;
+  --inkwell-light: #E4EFF5;
+
+  --fresh-water: #5D9CBD;
+  --fresh-water-light: #DCECF5;
+  --fresh-water-dark: #3F7E9F;
+
+  --nourish: #798C5E;
+  --nourish-light: #E7EFE1;
+  --nourish-dark: #5C6D44;
+
+  --balanced: #C1BFA8;
+  --balanced-light: #ECEBE1;
+  --balanced-dark: #9A977D;
+
+  --harvest: #DAC297;
+  --harvest-light: #F7EFE1;
+  --harvest-bright: #E2B96B;
+  --harvest-dark: #B99C68;
+
+  --oatmilk: #F6EAD4;
+  --oatmilk-light: #FBF5E9;
+  --oatmilk-dark: #E6D4B7;
+
+  --feather: #FFFAF0;
+  
+  /* Pop marker accents (for doodles, stamps, and high-energy sticker notes) */
+  --marker-red: #D74738;
+  --marker-red-light: #FBECE9;
+  --marker-coral: #E85C4D;
+  --charcoal: #1E2328;
+  --charcoal-subtle: #4D555E;
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+  --font-display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  --font-marker: 'Caveat', cursive, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* ==========================================================================
+     BORDERS & CORNERS
+     ========================================================================== */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  --border-solid: 2px solid var(--charcoal);
+  --border-subtle: 1.5px solid rgba(12, 94, 138, 0.2);
+  --border-dashed: 2px dashed var(--charcoal);
+
+  /* ==========================================================================
+     SHADOWS & NEO-BRUTALIST OFFSETS
+     ========================================================================== */
+  --shadow-sm: 2px 2px 0px var(--charcoal);
+  --shadow-md: 4px 4px 0px var(--charcoal);
+  --shadow-lg: 6px 6px 0px var(--charcoal);
+  --shadow-xl: 8px 8px 0px var(--charcoal);
+  --shadow-soft: 0 10px 30px -10px rgba(12, 94, 138, 0.15);
+
+  /* ==========================================================================
+     TRANSITIONS
+     ========================================================================== */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

@@ -1,0 +1,248 @@
+/* ==========================================================================
+   NEO-BRUTALIST STICKERS, BADGES & INTERACTIVE ACCENTS
+   ========================================================================== */
+
+/* Sticker Badges with Neo-Brutalist Border & Drop Shadow */
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  border: var(--border-solid);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: var(--feather);
+  color: var(--charcoal);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-bounce), box-shadow var(--transition-bounce);
+  user-select: none;
+  cursor: default;
+}
+
+.sticker-badge:hover {
+  transform: translateY(-2px) rotate(1deg);
+  box-shadow: var(--shadow-md);
+}
+
+.sticker-badge--rotate-left {
+  transform: rotate(-3deg);
+}
+.sticker-badge--rotate-left:hover {
+  transform: translateY(-2px) rotate(-1deg);
+}
+
+.sticker-badge--rotate-right {
+  transform: rotate(3deg);
+}
+.sticker-badge--rotate-right:hover {
+  transform: translateY(-2px) rotate(5deg);
+}
+
+.sticker-badge--yellow {
+  background-color: var(--harvest-bright);
+  color: var(--charcoal);
+}
+
+.sticker-badge--blue {
+  background-color: var(--fresh-water);
+  color: #ffffff;
+  border-color: var(--charcoal);
+}
+
+.sticker-badge--green {
+  background-color: var(--nourish);
+  color: #ffffff;
+}
+
+.sticker-badge--coral {
+  background-color: var(--marker-coral);
+  color: #ffffff;
+}
+
+.sticker-badge--inkwell {
+  background-color: var(--inkwell);
+  color: #ffffff;
+}
+
+/* Big Stamp Badge (Circular "CLEAN CODE = GREAT PRODUCTS") */
+.stamp-badge {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--marker-red);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: var(--border-solid);
+  box-shadow: var(--shadow-md);
+  transform: rotate(-6deg);
+  animation: floatStamp 6s ease-in-out infinite alternate;
+  user-select: none;
+  cursor: pointer;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-bounce);
+}
+
+.stamp-badge:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes floatStamp {
+  0% { transform: translateY(0px) rotate(-6deg); }
+  100% { transform: translateY(-8px) rotate(-3deg); }
+}
+
+.stamp-badge__text {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  padding: 0 0.4rem;
+}
+
+.stamp-badge__icon {
+  margin: 0.2rem 0;
+}
+
+/* Washi Tape Badge (e.g. "A few projects I'm proud of") */
+.washi-tape {
+  display: inline-block;
+  background-color: var(--charcoal);
+  color: var(--feather);
+  font-family: var(--font-marker);
+  font-size: 1.25rem;
+  padding: 0.35rem 1.4rem;
+  border-radius: 3px;
+  transform: rotate(2deg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+.washi-tape::before,
+.washi-tape::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.washi-tape::before { left: 4px; }
+.washi-tape::after { right: 4px; }
+
+/* Interactive Pill Button */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.6rem;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  border: var(--border-solid);
+  background-color: var(--harvest-bright);
+  color: var(--charcoal);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+  background-color: #eed07d;
+}
+
+.btn-pill:active {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-pill--inkwell {
+  background-color: var(--inkwell);
+  color: #ffffff;
+}
+.btn-pill--inkwell:hover {
+  background-color: var(--inkwell-dark);
+}
+
+.btn-pill--feather {
+  background-color: var(--feather);
+  color: var(--charcoal);
+}
+
+/* Highlighter Text Marker */
+.highlighter-strip {
+  display: inline-block;
+  background-color: var(--harvest-bright);
+  color: var(--charcoal);
+  padding: 0.4rem 1.2rem;
+  font-family: var(--font-marker);
+  font-size: 1.55rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transform: rotate(-1.5deg);
+  box-shadow: var(--shadow-sm);
+  margin-top: 0.75rem;
+  line-height: 1.2;
+}
+
+/* Round Arrow Action Button */
+.btn-round-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: var(--border-solid);
+  background-color: var(--feather);
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-bounce);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.btn-round-arrow:hover {
+  background-color: var(--inkwell);
+  color: #ffffff;
+  transform: translate(-2px, -2px) rotate(-45deg);
+  box-shadow: var(--shadow-md);
+}
+
+/* Doodle / Decorative Accents */
+.doodle-sparkle {
+  color: var(--fresh-water);
+  animation: pulseRotate 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes pulseRotate {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(15deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* Halftone Grid Pattern */
+.halftone-dots {
+  background-image: radial-gradient(var(--balanced) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
