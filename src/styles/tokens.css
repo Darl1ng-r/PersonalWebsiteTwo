@@ -1,41 +1,77 @@
 :root {
   /* ==========================================================================
-     COLOR TOKENS (from Colors.md: NUTRITIONIST COLOR PALETTE -> SWE ADAPTED)
+     COLOR DEFINITIONS (from Colors.md)
      ========================================================================== */
+  
+  /* --- NEW COLORS --- */
+  --tulip-rose: #F39BB3;
+  --tulip-rose-light: #FCE8EE;
+  --tulip-rose-dark: #D47B93;
+
+  --tanager-turquoise: #A7F3F3;
+  --tanager-turquoise-light: #E8FCFC;
+  --tanager-turquoise-dark: #74D2D2;
+
+  --sage: #8AA68F;
+  --sage-light: #E4ECE5;
+  --sage-dark: #6B8870;
+
+  --green-tea: #D4D973;
+  --green-tea-light: #F5F7D6;
+  --green-tea-dark: #B2B752;
+
+  --toasted-nut: #BF9177;
+  --toasted-nut-light: #F1E5DE;
+  --toasted-nut-dark: #9F7259;
+
+  --bubinga: #B26565;
+  --bubinga-light: #F4E2E2;
+  --bubinga-dark: #8E4949;
+
+  /* --- ORIGINAL EARTHY COLORS --- */
   --inkwell: #0C5E8A;
   --inkwell-dark: #08405E;
-  --inkwell-deep: #052A3F;
-  --inkwell-light: #E4EFF5;
-
   --fresh-water: #5D9CBD;
-  --fresh-water-light: #DCECF5;
-  --fresh-water-dark: #3F7E9F;
-
   --nourish: #798C5E;
-  --nourish-light: #E7EFE1;
-  --nourish-dark: #5C6D44;
-
   --balanced: #C1BFA8;
-  --balanced-light: #ECEBE1;
-  --balanced-dark: #9A977D;
-
   --harvest: #DAC297;
-  --harvest-light: #F7EFE1;
   --harvest-bright: #E2B96B;
-  --harvest-dark: #B99C68;
-
   --oatmilk: #F6EAD4;
-  --oatmilk-light: #FBF5E9;
-  --oatmilk-dark: #E6D4B7;
-
   --feather: #FFFAF0;
-  
-  /* Pop marker accents (for doodles, stamps, and high-energy sticker notes) */
-  --marker-red: #D74738;
-  --marker-red-light: #FBECE9;
-  --marker-coral: #E85C4D;
+
+  /* Neutral Dark / Borders */
   --charcoal: #1E2328;
   --charcoal-subtle: #4D555E;
+
+  /* Section Backgrounds */
+  --theme-canvas: var(--oatmilk);
+  --theme-hero-bg: var(--oatmilk);
+  --theme-whatido-bg: var(--sage);
+  --theme-work-bg: var(--tanager-turquoise);
+  --theme-contact-left: var(--green-tea);
+  --theme-contact-right: var(--tulip-rose);
+  --theme-footer-bg: var(--bubinga);
+
+  --theme-card-bg: #FFFFFF;
+  --theme-hero-blob: var(--green-tea);
+  --theme-hero-highlighter: var(--green-tea);
+  --theme-marker: var(--bubinga);
+  --theme-sparkle: var(--tulip-rose);
+  --theme-superpower-sticker: var(--tanager-turquoise);
+  --theme-purpose-badge: var(--tulip-rose);
+  
+  --theme-work-washi: var(--bubinga);
+  
+  --theme-stamp: var(--bubinga);
+  --theme-contact-marker: var(--bubinga);
+  --theme-action-btn: var(--tanager-turquoise);
+  --theme-action-btn-text: var(--charcoal);
+
+  /* Pillar Icon Palette */
+  --pillar-color-1: var(--tulip-rose);
+  --pillar-color-2: var(--tanager-turquoise);
+  --pillar-color-3: var(--green-tea);
+  --pillar-color-4: var(--toasted-nut);
 
   /* ==========================================================================
      TYPOGRAPHY
@@ -54,7 +90,7 @@
   --radius-pill: 9999px;
 
   --border-solid: 2px solid var(--charcoal);
-  --border-subtle: 1.5px solid rgba(12, 94, 138, 0.2);
+  --border-subtle: 1.5px solid rgba(30, 35, 40, 0.2);
   --border-dashed: 2px dashed var(--charcoal);
 
   /* ==========================================================================
@@ -64,11 +100,41 @@
   --shadow-md: 4px 4px 0px var(--charcoal);
   --shadow-lg: 6px 6px 0px var(--charcoal);
   --shadow-xl: 8px 8px 0px var(--charcoal);
-  --shadow-soft: 0 10px 30px -10px rgba(12, 94, 138, 0.15);
+  --shadow-soft: 0 10px 30px -10px rgba(30, 35, 40, 0.12);
 
   /* ==========================================================================
      TRANSITIONS
      ========================================================================== */
   --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
   --transition-bounce: 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Optional Alternate Theme: Classic Earthy */
+[data-theme="earthy"] {
+  --theme-canvas: var(--oatmilk);
+  --theme-hero-bg: var(--oatmilk);
+  --theme-whatido-bg: var(--balanced);
+  --theme-card-bg: var(--feather);
+  --theme-hero-blob: var(--harvest-bright);
+  --theme-hero-highlighter: var(--harvest-bright);
+  --theme-marker: #D74738;
+  --theme-sparkle: var(--fresh-water);
+  --theme-superpower-sticker: var(--fresh-water);
+  --theme-purpose-badge: var(--harvest-bright);
+  
+  --theme-work-bg: var(--fresh-water);
+  --theme-work-washi: var(--charcoal);
+  
+  --theme-stamp: #D74738;
+  --theme-contact-left: var(--harvest-bright);
+  --theme-contact-right: #E85C4D;
+  --theme-contact-marker: #D74738;
+  --theme-footer-bg: var(--inkwell);
+  --theme-action-btn: var(--harvest-bright);
+  --theme-action-btn-text: var(--charcoal);
+
+  --pillar-color-1: var(--harvest-bright);
+  --pillar-color-2: var(--fresh-water);
+  --pillar-color-3: #E85C4D;
+  --pillar-color-4: var(--nourish);
 }

@@ -17,7 +17,7 @@ export default function ContactSection() {
       particleCount: 20,
       spread: 45,
       origin: { y: 0.8 },
-      colors: ['#0C5E8A', '#798C5E', '#DAC297']
+      colors: ['#F39BB3', '#A7F3F3', '#D4D973', '#B26565']
     });
   };
 
@@ -30,7 +30,7 @@ export default function ContactSection() {
       origin: { x, y },
       particleCount: 45,
       spread: 75,
-      colors: ['#D74738', '#0C5E8A', '#5D9CBD', '#798C5E', '#DAC297']
+      colors: ['#F39BB3', '#A7F3F3', '#D4D973', '#B26565', '#BF9177']
     });
   };
 
@@ -159,7 +159,7 @@ export default function ContactSection() {
             aria-label="Thank you interactive sticker"
           >
             <span className="thank-you-text">THANK YOU!</span>
-            <Heart size={22} fill="var(--marker-red)" stroke="var(--marker-red)" />
+            <Heart size={22} fill="var(--bubinga)" stroke="var(--bubinga)" />
           </button>
         </div>
       </div>

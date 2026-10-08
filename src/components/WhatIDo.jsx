@@ -8,28 +8,28 @@ const SERVICES = [
     title: 'FULL-STACK APPS',
     description: 'Resilient web apps built with modern React, TypeScript, Node.js, and clean architecture that scales effortlessly.',
     icon: Terminal,
-    colorClass: 'pillar-icon--yellow'
+    colorClass: 'pillar-icon--1'
   },
   {
     id: 'systems',
     title: 'SYSTEM ARCHITECTURE',
     description: 'Scalable backend microservices, robust REST & GraphQL APIs, fault-tolerant pipelines, and optimized databases.',
     icon: Layers,
-    colorClass: 'pillar-icon--blue'
+    colorClass: 'pillar-icon--2'
   },
   {
     id: 'uiux',
     title: 'UI/UX & FRONTEND',
     description: 'Pixel-perfect, accessible design systems, fluid micro-interactions, and engaging user experiences that delight users.',
     icon: Layout,
-    colorClass: 'pillar-icon--coral'
+    colorClass: 'pillar-icon--3'
   },
   {
     id: 'perf',
     title: 'PERF & DEVOPS',
     description: 'Sub-second Core Web Vitals, automated CI/CD pipelines, Docker containerization, and edge cloud deployments.',
     icon: Gauge,
-    colorClass: 'pillar-icon--green'
+    colorClass: 'pillar-icon--4'
   }
 ];
 
@@ -41,9 +41,9 @@ export default function WhatIDo() {
 
     confetti({
       origin: { x, y },
-      particleCount: 30,
-      spread: 60,
-      colors: ['#D74738', '#0C5E8A', '#DAC297', '#798C5E']
+      particleCount: 35,
+      spread: 65,
+      colors: ['#F39BB3', '#A7F3F3', '#D4D973', '#B26565', '#8AA68F']
     });
   };
 

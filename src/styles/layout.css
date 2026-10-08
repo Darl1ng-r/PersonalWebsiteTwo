@@ -5,14 +5,14 @@
 /* Page Shell */
 .page-wrapper {
   min-height: 100vh;
-  background-color: var(--oatmilk);
+  background-color: var(--theme-canvas);
   color: var(--charcoal);
   font-family: var(--font-body);
   overflow-x: hidden;
   position: relative;
+  transition: background-color 0.3s ease;
 }
 
-/* Subtle organic grain / texture overlay if needed */
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -24,6 +24,8 @@
    ========================================================================== */
 .top-nav {
   padding: 1.5rem 0 1rem;
+  background-color: var(--theme-hero-bg);
+  transition: background-color 0.3s ease;
 }
 
 .top-nav__content {
@@ -53,7 +55,7 @@
 }
 
 .role-tag svg {
-  color: var(--marker-red);
+  color: var(--theme-marker);
 }
 
 .top-nav__center {
@@ -68,11 +70,11 @@
 }
 
 .purpose-badge {
-  background: var(--harvest-bright);
+  background: var(--theme-purpose-badge);
   border: var(--border-solid);
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
+  width: 74px;
+  height: 74px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,8 +82,9 @@
   text-align: center;
   box-shadow: var(--shadow-sm);
   transform: rotate(6deg);
-  transition: transform var(--transition-bounce);
+  transition: transform var(--transition-bounce), background-color 0.3s ease;
   cursor: pointer;
+  color: var(--charcoal);
 }
 
 .purpose-badge:hover {
@@ -106,8 +109,11 @@
    HERO SECTION
    ========================================================================== */
 .hero-section {
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 4.5rem;
   position: relative;
+  background-color: var(--theme-hero-bg);
+  border-bottom: var(--border-solid);
+  transition: background-color 0.3s ease;
 }
 
 .hero-grid {
@@ -127,12 +133,13 @@
 .hero-greeting {
   font-family: var(--font-marker);
   font-size: 4rem;
-  color: var(--marker-red);
+  color: var(--theme-marker);
   line-height: 1;
   transform: rotate(-3deg);
   margin-bottom: -0.5rem;
   letter-spacing: 0.02em;
   display: inline-block;
+  transition: color 0.3s ease;
 }
 
 .hero-title-group {
@@ -155,9 +162,10 @@
 }
 
 .hero-sparkle-blue {
-  color: var(--fresh-water);
+  color: var(--theme-sparkle);
   display: inline-flex;
   animation: floatAsterisk 5s ease-in-out infinite alternate;
+  transition: color 0.3s ease;
 }
 
 @keyframes floatAsterisk {
@@ -202,7 +210,7 @@
 }
 
 .hero-location svg {
-  color: var(--inkwell);
+  color: var(--bubinga);
 }
 
 /* Hero Right Column: Graphic Composition */
@@ -219,12 +227,12 @@
   width: 100%;
   max-width: 440px;
   height: 480px;
-  background-color: var(--harvest-bright);
+  background-color: var(--theme-hero-blob);
   border-radius: 46% 54% 63% 37% / 41% 44% 56% 59%;
   border: var(--border-solid);
   box-shadow: var(--shadow-lg);
   z-index: 1;
-  transition: border-radius 10s ease-in-out infinite alternate;
+  transition: border-radius 10s ease-in-out infinite alternate, background-color 0.3s ease;
   animation: blobMorph 12s ease-in-out infinite alternate;
 }
 
@@ -243,7 +251,7 @@
   overflow: hidden;
   border: var(--border-solid);
   box-shadow: var(--shadow-xl);
-  background-color: var(--feather);
+  background-color: #ffffff;
 }
 
 .hero-portrait-img {
@@ -264,8 +272,8 @@
   bottom: 25px;
   right: -15px;
   z-index: 3;
-  background: var(--fresh-water);
-  color: #ffffff;
+  background: var(--theme-superpower-sticker);
+  color: var(--charcoal);
   border: var(--border-solid);
   padding: 0.75rem 1.25rem;
   border-radius: var(--radius-md);
@@ -279,7 +287,7 @@
   font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: transform var(--transition-bounce);
+  transition: transform var(--transition-bounce), background-color 0.3s ease;
   cursor: pointer;
 }
 
@@ -301,8 +309,8 @@
   position: absolute;
   bottom: 120px;
   right: -30px;
-  color: #ffffff;
-  background: var(--harvest-bright);
+  color: var(--charcoal);
+  background: var(--tulip-rose);
   border: var(--border-solid);
   border-radius: 50%;
   width: 34px;
@@ -312,17 +320,18 @@
   justify-content: center;
   z-index: 3;
   box-shadow: var(--shadow-sm);
+  transition: background-color 0.3s ease;
 }
 
 /* ==========================================================================
    WHAT I DO / ENGINEERING PILLARS SECTION
    ========================================================================== */
 .what-i-do-section {
-  background-color: var(--feather);
-  border-top: var(--border-solid);
+  background-color: var(--theme-whatido-bg);
   border-bottom: var(--border-solid);
-  padding: 4.5rem 0;
+  padding: 5rem 0;
   position: relative;
+  transition: background-color 0.3s ease;
 }
 
 .what-i-do-layout {
@@ -356,7 +365,7 @@
   display: block;
   width: 48px;
   height: 4px;
-  background-color: var(--inkwell);
+  background-color: var(--bubinga);
   margin-top: 0.8rem;
 }
 
@@ -372,7 +381,7 @@
   border: var(--border-solid);
   border-radius: var(--radius-md);
   padding: 2rem 1.25rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -395,30 +404,30 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
-  transition: transform var(--transition-bounce);
+  transition: transform var(--transition-bounce), background-color 0.3s ease;
 }
 
 .pillar-card:hover .pillar-icon-circle {
   transform: scale(1.15) rotate(5deg);
 }
 
-.pillar-icon--yellow {
-  background-color: var(--harvest-bright);
+.pillar-icon--1 {
+  background-color: var(--pillar-color-1);
   color: var(--charcoal);
 }
 
-.pillar-icon--blue {
-  background-color: var(--fresh-water);
-  color: #ffffff;
+.pillar-icon--2 {
+  background-color: var(--pillar-color-2);
+  color: var(--charcoal);
 }
 
-.pillar-icon--coral {
-  background-color: var(--marker-coral);
-  color: #ffffff;
+.pillar-icon--3 {
+  background-color: var(--pillar-color-3);
+  color: var(--charcoal);
 }
 
-.pillar-icon--green {
-  background-color: var(--nourish);
+.pillar-icon--4 {
+  background-color: var(--pillar-color-4);
   color: #ffffff;
 }
 
@@ -443,10 +452,11 @@
    SELECTED WORK / PORTFOLIO SHOWCASE
    ========================================================================== */
 .selected-work-section {
-  background-color: var(--fresh-water);
+  background-color: var(--theme-work-bg);
   padding: 5rem 0 6rem;
   position: relative;
   overflow: hidden;
+  transition: background-color 0.3s ease;
 }
 
 .selected-work-header {
@@ -481,7 +491,7 @@
 }
 
 .project-card {
-  background-color: var(--feather);
+  background-color: #ffffff;
   border: var(--border-solid);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -500,7 +510,7 @@
   position: relative;
   aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: var(--oatmilk-dark);
+  background-color: var(--sage-light);
   border-bottom: var(--border-solid);
 }
 
@@ -559,18 +569,19 @@
   font-weight: 700;
   text-transform: uppercase;
   padding: 0.15rem 0.5rem;
-  background: var(--oatmilk);
+  background: var(--tanager-turquoise-light);
   border: 1px solid var(--charcoal);
   border-radius: var(--radius-pill);
 }
 
 /* ==========================================================================
-   CONTACT / LET'S CREATE SOMETHING GREAT
+   CONTACT / LET'S BUILD SOMETHING GREAT
    ========================================================================== */
 .contact-section {
   position: relative;
-  background-color: var(--harvest-bright);
+  background-color: var(--theme-contact-left);
   border-top: var(--border-solid);
+  transition: background-color 0.3s ease;
 }
 
 .contact-split-grid {
@@ -603,10 +614,11 @@
   display: block;
   font-family: var(--font-marker);
   font-size: clamp(3rem, 6.5vw, 5.2rem);
-  color: var(--marker-red);
+  color: var(--theme-contact-marker);
   line-height: 1;
   transform: rotate(-2deg);
   margin-top: 0.25rem;
+  transition: color 0.3s ease;
 }
 
 .contact-sub-invitation {
@@ -618,14 +630,15 @@
 }
 
 .contact-right-panel {
-  background-color: var(--marker-coral);
+  background-color: var(--theme-contact-right);
   border-left: var(--border-solid);
   padding: 4.5rem 3.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  color: #ffffff;
+  color: var(--charcoal);
+  transition: background-color 0.3s ease;
 }
 
 .contact-info-list {
@@ -640,26 +653,26 @@
   align-items: center;
   gap: 1rem;
   font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
+  font-weight: 700;
+  color: var(--charcoal);
   text-decoration: none;
   transition: transform var(--transition-fast);
 }
 
 .contact-item-row:hover {
   transform: translateX(4px);
-  color: var(--oatmilk);
+  color: #000000;
 }
 
 .contact-icon-pill {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--charcoal);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.15);
+  background: #ffffff;
   flex-shrink: 0;
 }
 
@@ -698,10 +711,11 @@
    FOOTER STRIP
    ========================================================================== */
 .footer-strip {
-  background-color: var(--inkwell);
+  background-color: var(--theme-footer-bg);
   border-top: var(--border-solid);
   padding: 1.25rem 0;
   color: #ffffff;
+  transition: background-color 0.3s ease;
 }
 
 .footer-content {
@@ -724,7 +738,54 @@
 }
 
 .footer-divider-sparkle {
-  color: var(--harvest-bright);
+  color: var(--tanager-turquoise);
+}
+
+/* Floating Palette Switcher */
+.theme-switcher-pill {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 99;
+  background-color: #ffffff;
+  border: var(--border-solid);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  padding: 0.35rem 0.4rem;
+  gap: 0.35rem;
+}
+
+.theme-btn-option {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--charcoal-subtle);
+  background: transparent;
+}
+
+.theme-btn-option.active {
+  background: var(--charcoal);
+  color: #ffffff;
+}
+
+.theme-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
 }
 
 /* ==========================================================================
@@ -791,6 +852,12 @@
     text-align: center;
   }
   .footer-left-status {
+    justify-content: center;
+  }
+  .theme-switcher-pill {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
     justify-content: center;
   }
 }

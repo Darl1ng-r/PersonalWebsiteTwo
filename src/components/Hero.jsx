@@ -13,7 +13,7 @@ export default function Hero({ name = "MARIANA" }) {
       particleCount: 40,
       spread: 70,
       startVelocity: 35,
-      colors: ['#0C5E8A', '#5D9CBD', '#798C5E', '#DAC297', '#D74738']
+      colors: ['#F39BB3', '#A7F3F3', '#D4D973', '#B26565', '#BF9177']
     });
   };
 
@@ -53,7 +53,7 @@ export default function Hero({ name = "MARIANA" }) {
                 <span>BASED IN ANY CITY, ST &bull; WORKING WORLDWIDE</span>
               </div>
 
-              <a href="#contact" className="btn-pill btn-pill--inkwell" id="hero-cta-button">
+              <a href="#contact" className="btn-pill btn-pill--bubinga" id="hero-cta-button">
                 Get In Touch
               </a>
             </div>

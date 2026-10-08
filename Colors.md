@@ -14,3 +14,17 @@ oatmilk
 #F6EAD4
 feather
 #FFFAFO
+
+New Colors:
+Tulip Rose
+#F39BB3
+Tanager Turquoise
+#A7F3F3
+Sage
+#8AA68F
+Green Tea
+#D4D973
+Toasted Nut
+#BF9177
+Bubinga
+#B26565

@@ -11,7 +11,7 @@ export default function Navbar() {
       origin: { x, y },
       particleCount: 25,
       spread: 60,
-      colors: ['#0C5E8A', '#5D9CBD', '#798C5E', '#DAC297', '#D74738']
+      colors: ['#F39BB3', '#A7F3F3', '#D4D973', '#B26565', '#8AA68F']
     });
   };
 

@@ -15,7 +15,7 @@
   font-size: 0.85rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  background-color: var(--feather);
+  background-color: var(--theme-card-bg);
   color: var(--charcoal);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-bounce), box-shadow var(--transition-bounce);
@@ -42,39 +42,44 @@
   transform: translateY(-2px) rotate(5deg);
 }
 
-.sticker-badge--yellow {
-  background-color: var(--harvest-bright);
+/* Color variations for badges */
+.sticker-badge--tulip {
+  background-color: var(--tulip-rose);
   color: var(--charcoal);
 }
 
-.sticker-badge--blue {
-  background-color: var(--fresh-water);
-  color: #ffffff;
-  border-color: var(--charcoal);
+.sticker-badge--turquoise {
+  background-color: var(--tanager-turquoise);
+  color: var(--charcoal);
 }
 
-.sticker-badge--green {
-  background-color: var(--nourish);
-  color: #ffffff;
+.sticker-badge--greentea {
+  background-color: var(--green-tea);
+  color: var(--charcoal);
 }
 
-.sticker-badge--coral {
-  background-color: var(--marker-coral);
-  color: #ffffff;
-}
-
-.sticker-badge--inkwell {
-  background-color: var(--inkwell);
+.sticker-badge--sage {
+  background-color: var(--sage);
   color: #ffffff;
 }
 
-/* Big Stamp Badge (Circular "CLEAN CODE = GREAT PRODUCTS") */
+.sticker-badge--toastednut {
+  background-color: var(--toasted-nut);
+  color: #ffffff;
+}
+
+.sticker-badge--bubinga {
+  background-color: var(--bubinga);
+  color: #ffffff;
+}
+
+/* Big Circular Stamp Badge ("CLEAN CODE = GREAT PRODUCTS") */
 .stamp-badge {
   position: relative;
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: var(--marker-red);
+  background: var(--theme-stamp);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -117,11 +122,11 @@
 /* Washi Tape Badge (e.g. "A few projects I'm proud of") */
 .washi-tape {
   display: inline-block;
-  background-color: var(--charcoal);
-  color: var(--feather);
+  background-color: var(--theme-work-washi);
+  color: #ffffff;
   font-family: var(--font-marker);
-  font-size: 1.25rem;
-  padding: 0.35rem 1.4rem;
+  font-size: 1.3rem;
+  padding: 0.4rem 1.4rem;
   border-radius: 3px;
   transform: rotate(2deg);
   box-shadow: var(--shadow-sm);
@@ -137,7 +142,7 @@
   top: 0;
   bottom: 0;
   width: 6px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
 }
 .washi-tape::before { left: 4px; }
 .washi-tape::after { right: 4px; }
@@ -157,8 +162,8 @@
   text-decoration: none;
   border-radius: var(--radius-pill);
   border: var(--border-solid);
-  background-color: var(--harvest-bright);
-  color: var(--charcoal);
+  background-color: var(--theme-action-btn);
+  color: var(--theme-action-btn-text);
   box-shadow: var(--shadow-md);
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -167,7 +172,7 @@
 .btn-pill:hover {
   transform: translate(-2px, -2px);
   box-shadow: var(--shadow-lg);
-  background-color: #eed07d;
+  filter: brightness(0.96);
 }
 
 .btn-pill:active {
@@ -175,25 +180,30 @@
   box-shadow: var(--shadow-sm);
 }
 
-.btn-pill--inkwell {
-  background-color: var(--inkwell);
+.btn-pill--dark {
+  background-color: var(--charcoal);
   color: #ffffff;
 }
-.btn-pill--inkwell:hover {
-  background-color: var(--inkwell-dark);
+
+.btn-pill--bubinga {
+  background-color: var(--bubinga);
+  color: #ffffff;
+}
+.btn-pill--bubinga:hover {
+  background-color: var(--bubinga-dark);
 }
 
-.btn-pill--feather {
-  background-color: var(--feather);
+.btn-pill--tulip {
+  background-color: var(--tulip-rose);
   color: var(--charcoal);
 }
 
 /* Highlighter Text Marker */
 .highlighter-strip {
   display: inline-block;
-  background-color: var(--harvest-bright);
+  background-color: var(--theme-hero-highlighter);
   color: var(--charcoal);
-  padding: 0.4rem 1.2rem;
+  padding: 0.45rem 1.25rem;
   font-family: var(--font-marker);
   font-size: 1.55rem;
   font-weight: 700;
@@ -210,7 +220,7 @@
   height: 44px;
   border-radius: 50%;
   border: var(--border-solid);
-  background-color: var(--feather);
+  background-color: #ffffff;
   color: var(--charcoal);
   display: flex;
   align-items: center;
@@ -222,7 +232,7 @@
 }
 
 .btn-round-arrow:hover {
-  background-color: var(--inkwell);
+  background-color: var(--bubinga);
   color: #ffffff;
   transform: translate(-2px, -2px) rotate(-45deg);
   box-shadow: var(--shadow-md);
@@ -230,7 +240,7 @@
 
 /* Doodle / Decorative Accents */
 .doodle-sparkle {
-  color: var(--fresh-water);
+  color: var(--theme-sparkle);
   animation: pulseRotate 4s ease-in-out infinite;
   display: inline-block;
 }
@@ -243,6 +253,7 @@
 
 /* Halftone Grid Pattern */
 .halftone-dots {
-  background-image: radial-gradient(var(--balanced) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(var(--toasted-nut) 1.5px, transparent 1.5px);
   background-size: 10px 10px;
+  opacity: 0.6;
 }
