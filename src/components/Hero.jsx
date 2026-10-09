@@ -2,7 +2,7 @@ import React from 'react';
 import { Globe, Zap, Sparkles, Plus } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
-export default function Hero({ name = "MARIANA" }) {
+export default function Hero({ name = "RAMA MAZEN" }) {
   const triggerSuperpowerConfetti = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = (rect.left + rect.width / 2) / window.innerWidth;
@@ -50,7 +50,7 @@ export default function Hero({ name = "MARIANA" }) {
             <div className="hero-meta-row">
               <div className="hero-location" id="hero-location-badge">
                 <Globe size={18} strokeWidth={2.5} />
-                <span>BASED IN ANY CITY, ST &bull; WORKING WORLDWIDE</span>
+                <span>BASED IN AMMAN, JORDAN &bull; WORKING WORLDWIDE</span>
               </div>
 
               <a href="#contact" className="btn-pill btn-pill--bubinga" id="hero-cta-button">

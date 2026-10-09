@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import ThemeSwitcher from './components/ThemeSwitcher';
 
 export default function App() {
-  const [developerName] = useState('MARIANA');
+  const [developerName] = useState('RAMA MAZEN');
   const [theme, setTheme] = useState('new-colors');
 
   useEffect(() => {

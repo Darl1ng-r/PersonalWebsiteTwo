@@ -1,17 +1,36 @@
 import React, { useState } from 'react';
-import { Mail, Globe, MapPin, Copy, Check, Heart } from 'lucide-react';
+import { Mail, Phone, Globe, MapPin, Copy, Check, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import confetti from 'canvas-confetti';
 
 export default function ContactSection() {
-  const [copied, setCopied] = useState(false);
-  const emailAddress = "mariana.engineer@domain.com";
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+
+  const emailAddress = "rama.tubeh.04@gmail.com";
+  const phoneNumber = "(+962) 8228 6589";
+  const phoneTel = "+96282286589";
 
   const handleCopyEmail = (e) => {
     e.preventDefault();
     navigator.clipboard.writeText(emailAddress);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2200);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2200);
+
+    confetti({
+      particleCount: 20,
+      spread: 45,
+      origin: { y: 0.8 },
+      colors: ['#F39BB3', '#A7F3F3', '#D4D973', '#B26565']
+    });
+  };
+
+  const handleCopyPhone = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigator.clipboard.writeText(phoneNumber);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2200);
 
     confetti({
       particleCount: 20,
@@ -55,8 +74,8 @@ export default function ContactSection() {
 
           <div style={{ maxWidth: '480px' }}>
             <p className="contact-sub-invitation">
-              Have a project or engineering role in mind?<br />
-              Let's build reliable, elegant software together.
+              Have an engineering opportunity or project in mind?<br />
+              Let's connect and build reliable, elegant software.
             </p>
           </div>
 
@@ -76,11 +95,42 @@ export default function ContactSection() {
         <div className="contact-right-panel">
           <div>
             <span className="sticker-badge" style={{ backgroundColor: '#ffffff', color: 'var(--charcoal)' }}>
-              CONTACT ME
+              CONTACT RAMA
             </span>
           </div>
 
           <div className="contact-info-list">
+            {/* Phone Number with Call & Copy */}
+            <div
+              className="contact-item-row"
+              style={{ cursor: 'pointer' }}
+              title="Click to copy phone number"
+            >
+              <div className="contact-icon-pill">
+                <Phone size={18} />
+              </div>
+              <a
+                href={`tel:${phoneTel}`}
+                style={{ letterSpacing: '0.02em', flexGrow: 1, color: 'inherit', textDecoration: 'none' }}
+              >
+                {phoneNumber}
+              </a>
+              <button
+                className="sticker-badge"
+                onClick={handleCopyPhone}
+                style={{
+                  padding: '0.2rem 0.6rem',
+                  fontSize: '0.75rem',
+                  backgroundColor: copiedPhone ? 'var(--bubinga)' : '#ffffff',
+                  color: copiedPhone ? '#ffffff' : 'var(--charcoal)'
+                }}
+                aria-label="Copy phone number"
+              >
+                {copiedPhone ? <Check size={14} /> : <Copy size={14} />}
+                <span>{copiedPhone ? 'Copied!' : 'Copy'}</span>
+              </button>
+            </div>
+
             {/* Email with Quick Copy */}
             <div
               className="contact-item-row"
@@ -94,30 +144,22 @@ export default function ContactSection() {
               <span style={{ letterSpacing: '0.02em', flexGrow: 1 }}>{emailAddress}</span>
               <button
                 className="sticker-badge"
-                style={{ padding: '0.2rem 0.6rem', fontSize: '0.75rem', backgroundColor: copied ? 'var(--nourish)' : '#ffffff', color: copied ? '#ffffff' : 'var(--charcoal)' }}
+                style={{
+                  padding: '0.2rem 0.6rem',
+                  fontSize: '0.75rem',
+                  backgroundColor: copiedEmail ? 'var(--bubinga)' : '#ffffff',
+                  color: copiedEmail ? '#ffffff' : 'var(--charcoal)'
+                }}
                 aria-label="Copy email address"
               >
-                {copied ? <Check size={14} /> : <Copy size={14} />}
-                <span>{copied ? 'Copied!' : 'Copy'}</span>
+                {copiedEmail ? <Check size={14} /> : <Copy size={14} />}
+                <span>{copiedEmail ? 'Copied!' : 'Copy'}</span>
               </button>
             </div>
 
-            {/* Website */}
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-item-row"
-            >
-              <div className="contact-icon-pill">
-                <Globe size={18} />
-              </div>
-              <span>www.marianacodes.dev</span>
-            </a>
-
             {/* GitHub */}
             <a
-              href="https://github.com"
+              href="https://github.com/Darl1ng-r"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item-row"
@@ -125,12 +167,12 @@ export default function ContactSection() {
               <div className="contact-icon-pill">
                 <GithubIcon size={18} />
               </div>
-              <span>github.com/mariana-dev</span>
+              <span>github.com/Darl1ng-r</span>
             </a>
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rama-mazen-02406b382/"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item-row"
@@ -138,7 +180,7 @@ export default function ContactSection() {
               <div className="contact-icon-pill">
                 <LinkedinIcon size={18} />
               </div>
-              <span>linkedin.com/in/mariana-engineer</span>
+              <span>linkedin.com/in/rama-mazen</span>
             </a>
 
             {/* Location */}
@@ -146,7 +188,7 @@ export default function ContactSection() {
               <div className="contact-icon-pill">
                 <MapPin size={18} />
               </div>
-              <span>Remote / Worldwide</span>
+              <span>Amman, Jordan &bull; Worldwide</span>
             </div>
           </div>
 

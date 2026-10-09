@@ -10,8 +10,8 @@ const PROJECTS = [
     tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     image: '/assets/project_analytics.jpg',
     description: 'An enterprise web analytics telemetry dashboard processing millions of real-time events with custom interactive charts, filtering pipelines, and sub-100ms query response times.',
-    liveUrl: 'https://github.com',
-    codeUrl: 'https://github.com'
+    liveUrl: 'https://github.com/Darl1ng-r',
+    codeUrl: 'https://github.com/Darl1ng-r'
   },
   {
     id: 'mindset-app',
@@ -20,8 +20,8 @@ const PROJECTS = [
     tags: ['React Native', 'Tailwind', 'GraphQL', 'Zustand'],
     image: '/assets/project_mobile.jpg',
     description: 'A habit and deep work tracking mobile experience featuring offline-first synchronization, local SQLite persistence, biometric login, and habit streak visualizations.',
-    liveUrl: 'https://github.com',
-    codeUrl: 'https://github.com'
+    liveUrl: 'https://github.com/Darl1ng-r',
+    codeUrl: 'https://github.com/Darl1ng-r'
   },
   {
     id: 'cloud-mesh',
@@ -30,8 +30,8 @@ const PROJECTS = [
     tags: ['Go', 'Kubernetes', 'WebSockets', 'Docker'],
     image: '/assets/project_cloud.jpg',
     description: 'A cloud-native developer workspace orchestrating isolated microservice containers with live terminal streaming, telemetry metrics, and automated canary deployments.',
-    liveUrl: 'https://github.com',
-    codeUrl: 'https://github.com'
+    liveUrl: 'https://github.com/Darl1ng-r',
+    codeUrl: 'https://github.com/Darl1ng-r'
   },
   {
     id: 'code-lab',
@@ -40,8 +40,8 @@ const PROJECTS = [
     tags: ['Three.js', 'WebGL', 'Vite', 'CSS Houdini'],
     image: '/assets/project_codelab.jpg',
     description: 'An experimental interactive generative graphics showcase created for creative technologists, blending neo-brutalist poster typography with 60 FPS WebGL canvas shaders.',
-    liveUrl: 'https://github.com',
-    codeUrl: 'https://github.com'
+    liveUrl: 'https://github.com/Darl1ng-r',
+    codeUrl: 'https://github.com/Darl1ng-r'
   }
 ];
 
