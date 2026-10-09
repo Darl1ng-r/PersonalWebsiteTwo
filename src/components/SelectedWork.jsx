@@ -4,44 +4,34 @@ import { GithubIcon } from './Icons';
 
 const PROJECTS = [
   {
-    id: 'analytics-hub',
-    name: 'ANALYTICS HUB',
-    category: 'Full-Stack SaaS Platform',
-    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
-    image: '/assets/project_analytics.jpg',
-    description: 'An enterprise web analytics telemetry dashboard processing millions of real-time events with custom interactive charts, filtering pipelines, and sub-100ms query response times.',
-    liveUrl: 'https://github.com/Darl1ng-r',
-    codeUrl: 'https://github.com/Darl1ng-r'
+    id: 'throughlines',
+    name: 'THROUGHLINES',
+    category: 'Epistemic Reasoning & Belief Tracking',
+    tags: ['React 18', 'Vite', 'Supabase', 'PostgreSQL', 'Recharts'],
+    image: '/assets/project_throughlines.jpg',
+    description: 'An epistemic reasoning laboratory designed to capture cognitive trajectories and belief evolution over time. Features subjective conviction tracking with 0–100% certainty curves, structured epistemic shift attribution (counter-arguments, empirical data, value shifts), offline-first IndexedDB persistence, and Supabase PostgreSQL synchronization.',
+    liveUrl: 'https://github.com/Darl1ng-r/ThroughLines',
+    codeUrl: 'https://github.com/Darl1ng-r/ThroughLines'
   },
   {
-    id: 'mindset-app',
-    name: 'MINDSET FOCUS',
-    category: 'Mobile & PWA Experience',
-    tags: ['React Native', 'Tailwind', 'GraphQL', 'Zustand'],
-    image: '/assets/project_mobile.jpg',
-    description: 'A habit and deep work tracking mobile experience featuring offline-first synchronization, local SQLite persistence, biometric login, and habit streak visualizations.',
-    liveUrl: 'https://github.com/Darl1ng-r',
-    codeUrl: 'https://github.com/Darl1ng-r'
+    id: 'argus',
+    name: 'ARGUS',
+    category: 'Directed Argument Mapping Platform',
+    tags: ['React 18', 'Cytoscape.js', 'TypeScript', 'Express', 'Prisma'],
+    image: '/assets/project_argus.jpg',
+    description: 'A visual debate mapping engine transforming chaotic linear comment threads into structured directed graphs. Maps atomic claim nodes and evaluates logical relationship edges (Supports, Refutes, Clarifies, Requires Evidence), computing graph topology to reveal unrebutted dead ends, central hub claims, and true points of convergence.',
+    liveUrl: 'https://github.com/Darl1ng-r/Argus',
+    codeUrl: 'https://github.com/Darl1ng-r/Argus'
   },
   {
-    id: 'cloud-mesh',
-    name: 'CLOUD MESH IDE',
-    category: 'Distributed Systems & DevTools',
-    tags: ['Go', 'Kubernetes', 'WebSockets', 'Docker'],
-    image: '/assets/project_cloud.jpg',
-    description: 'A cloud-native developer workspace orchestrating isolated microservice containers with live terminal streaming, telemetry metrics, and automated canary deployments.',
-    liveUrl: 'https://github.com/Darl1ng-r',
-    codeUrl: 'https://github.com/Darl1ng-r'
-  },
-  {
-    id: 'code-lab',
-    name: 'CODE LAB 2026',
-    category: 'Creative Tech & Interactive Web',
-    tags: ['Three.js', 'WebGL', 'Vite', 'CSS Houdini'],
-    image: '/assets/project_codelab.jpg',
-    description: 'An experimental interactive generative graphics showcase created for creative technologists, blending neo-brutalist poster typography with 60 FPS WebGL canvas shaders.',
-    liveUrl: 'https://github.com/Darl1ng-r',
-    codeUrl: 'https://github.com/Darl1ng-r'
+    id: 'jordan-it-jobs',
+    name: 'JORDAN IT JOBS PORTAL',
+    category: 'Tech Market Intelligence & Scraper',
+    tags: ['Python', 'Streamlit', 'BeautifulSoup4', 'Plotly', 'Pandas'],
+    image: '/assets/project_jordan_jobs.jpg',
+    description: 'An automated market intelligence portal and job scraper monitoring the tech employment landscape across Jordan. Tracks software engineering vacancies, role domain salary distributions, skill demand trends (Frontend, Backend, DevOps, AI), and remote/hybrid opportunities with interactive analytical dashboards and scheduled scrapers.',
+    liveUrl: 'https://github.com/Darl1ng-r/jordan-it-jobs-portal',
+    codeUrl: 'https://github.com/Darl1ng-r/jordan-it-jobs-portal'
   }
 ];
 
@@ -74,12 +64,12 @@ export default function SelectedWork() {
 
           <div>
             <span className="washi-tape" id="washi-tape-badge">
-              A few projects I'm proud of
+              Featured Open-Source Projects
             </span>
           </div>
         </div>
 
-        {/* 4 Projects Grid */}
+        {/* 3 Projects Grid */}
         <div className="projects-grid" id="projects-container">
           {PROJECTS.map((project) => (
             <div
@@ -116,16 +106,30 @@ export default function SelectedWork() {
                   </div>
                 </div>
 
-                <button
-                  className="btn-round-arrow"
-                  aria-label={`View details for ${project.name}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    openProjectModal(project);
-                  }}
-                >
-                  <ArrowUpRight size={22} strokeWidth={2.5} />
-                </button>
+                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                  <a
+                    href={project.codeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-round-icon"
+                    aria-label={`Open GitHub repository for ${project.name}`}
+                    onClick={(e) => e.stopPropagation()}
+                    title="View GitHub Repository"
+                  >
+                    <GithubIcon size={18} />
+                  </a>
+                  <button
+                    className="btn-round-arrow"
+                    aria-label={`View details for ${project.name}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openProjectModal(project);
+                    }}
+                    title="View Project Details"
+                  >
+                    <ArrowUpRight size={22} strokeWidth={2.5} />
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -226,23 +230,25 @@ export default function SelectedWork() {
 
               <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem', flexWrap: 'wrap' }}>
                 <a
-                  href={activeModalProject.liveUrl}
+                  href={activeModalProject.codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill btn-pill--inkwell"
                   style={{ textDecoration: 'none' }}
                 >
-                  <ExternalLink size={18} strokeWidth={2.5} /> Live Showcase
+                  <GithubIcon size={18} /> View on GitHub
                 </a>
-                <a
-                  href={activeModalProject.codeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-pill btn-pill--feather"
-                  style={{ textDecoration: 'none' }}
-                >
-                  <GithubIcon size={18} /> View Source
-                </a>
+                {activeModalProject.liveUrl && activeModalProject.liveUrl !== activeModalProject.codeUrl && (
+                  <a
+                    href={activeModalProject.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-pill btn-pill--feather"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <ExternalLink size={18} strokeWidth={2.5} /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           </div>

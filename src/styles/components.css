@@ -238,6 +238,30 @@
   box-shadow: var(--shadow-md);
 }
 
+.btn-round-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: var(--border-solid);
+  background-color: #ffffff;
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-bounce);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.btn-round-icon:hover {
+  background-color: var(--theme-selected-accent, var(--tanager-turquoise));
+  color: var(--charcoal);
+  transform: translate(-2px, -2px) scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
 /* Doodle / Decorative Accents */
 .doodle-sparkle {
   color: var(--theme-sparkle);
