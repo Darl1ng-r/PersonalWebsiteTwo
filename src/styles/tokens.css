@@ -47,6 +47,7 @@
   --theme-canvas: var(--oatmilk);
   --theme-hero-bg: var(--oatmilk);
   --theme-whatido-bg: var(--sage);
+  --theme-experience-bg: var(--toasted-nut);
   --theme-work-bg: var(--tanager-turquoise);
   --theme-contact-left: var(--green-tea);
   --theme-contact-right: var(--tulip-rose);
@@ -114,6 +115,7 @@
   --theme-canvas: var(--oatmilk);
   --theme-hero-bg: var(--oatmilk);
   --theme-whatido-bg: var(--balanced);
+  --theme-experience-bg: var(--nourish);
   --theme-card-bg: var(--feather);
   --theme-hero-blob: var(--harvest-bright);
   --theme-hero-highlighter: var(--harvest-bright);

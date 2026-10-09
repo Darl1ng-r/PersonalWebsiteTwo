@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatIDo from './components/WhatIDo';
+import Experience from './components/Experience';
 import SelectedWork from './components/SelectedWork';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ export default function App() {
       <main>
         <Hero name={developerName} />
         <WhatIDo />
+        <Experience />
         <SelectedWork />
         <ContactSection />
       </main>
