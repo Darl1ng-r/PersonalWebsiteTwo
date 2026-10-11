@@ -4,10 +4,10 @@ import { GithubIcon } from './Icons';
 
 const PROJECTS = [
   {
-    id: 'aml-sentinel',
-    name: 'AML SENTINEL',
-    category: 'Enterprise AML & Transaction Monitoring',
-    tags: ['FastAPI', 'Python', 'Neo4j', 'PostgreSQL', 'Redis', 'Kafka'],
+    id: 'aml-system',
+    name: 'ANTI-MONEY LAUNDERING SYSTEM',
+    category: 'Enterprise AML & Compliance Platform',
+    tags: ['Python', 'FastAPI', 'Neo4j', 'PostgreSQL', 'Redis', 'Kafka'],
     image: '/assets/project_aml_sentinel.jpg',
     description: 'An enterprise-grade Anti-Money Laundering (AML) transaction monitoring and regulatory compliance platform. Combines real-time deterministic rule evaluation (<50ms latency), behavioral machine learning anomaly scoring (Isolation Forest), Neo4j graph topology intelligence for detecting circular fund loops and money mule networks, and automated FinCEN SAR regulatory filing.',
     liveUrl: 'https://github.com/Darl1ng-r/aml_system',
@@ -79,7 +79,7 @@ export default function SelectedWork() {
           </div>
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid: 4 Projects Next to Each Other */}
         <div className="projects-grid" id="projects-container">
           {PROJECTS.map((project) => (
             <div
@@ -107,7 +107,7 @@ export default function SelectedWork() {
 
               <div className="project-info-row">
                 <div className="project-text-group">
-                  <h3 className="project-name">{project.name}</h3>
+                  <h3 className="project-name" title={project.name}>{project.name}</h3>
                   <span className="project-category">{project.category}</span>
                   <div className="project-tags">
                     {project.tags.slice(0, 3).map((tag, i) => (
@@ -116,7 +116,7 @@ export default function SelectedWork() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                <div className="project-card-actions">
                   <a
                     href={project.codeUrl}
                     target="_blank"
@@ -126,7 +126,7 @@ export default function SelectedWork() {
                     onClick={(e) => e.stopPropagation()}
                     title="View GitHub Repository"
                   >
-                    <GithubIcon size={18} />
+                    <GithubIcon size={16} />
                   </a>
                   <button
                     className="btn-round-arrow"
@@ -137,7 +137,7 @@ export default function SelectedWork() {
                     }}
                     title="View Project Details"
                   >
-                    <ArrowUpRight size={22} strokeWidth={2.5} />
+                    <ArrowUpRight size={18} strokeWidth={2.5} />
                   </button>
                 </div>
               </div>
