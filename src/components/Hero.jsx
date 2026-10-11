@@ -74,19 +74,16 @@ export default function Hero({ name = "RAMA MAZEN" }) {
 
             {/* Portrait Frame */}
             <div className="hero-portrait-card">
-              <picture>
-                <source srcSet="/assets/hero_portrait.webp" type="image/webp" />
-                <img
-                  src="/assets/hero_portrait.jpg"
-                  alt={`${name} - Software Engineer`}
-                  className="hero-portrait-img"
-                  id="hero-portrait"
-                  width="380"
-                  height="380"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-              </picture>
+              <img
+                src="/assets/hero_portrait.webp"
+                alt={`${name} - Software Engineer`}
+                className="hero-portrait-img"
+                id="hero-portrait"
+                width="380"
+                height="380"
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
 
             {/* Floating Superpower Badge */}
