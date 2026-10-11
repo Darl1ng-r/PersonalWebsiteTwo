@@ -4,6 +4,16 @@ import { GithubIcon } from './Icons';
 
 const PROJECTS = [
   {
+    id: 'aml-sentinel',
+    name: 'AML SENTINEL',
+    category: 'Enterprise AML & Transaction Monitoring',
+    tags: ['FastAPI', 'Python', 'Neo4j', 'PostgreSQL', 'Redis', 'Kafka'],
+    image: '/assets/project_aml_sentinel.jpg',
+    description: 'An enterprise-grade Anti-Money Laundering (AML) transaction monitoring and regulatory compliance platform. Combines real-time deterministic rule evaluation (<50ms latency), behavioral machine learning anomaly scoring (Isolation Forest), Neo4j graph topology intelligence for detecting circular fund loops and money mule networks, and automated FinCEN SAR regulatory filing.',
+    liveUrl: 'https://github.com/Darl1ng-r/aml_system',
+    codeUrl: 'https://github.com/Darl1ng-r/aml_system'
+  },
+  {
     id: 'throughlines',
     name: 'THROUGHLINES',
     category: 'Epistemic Reasoning & Belief Tracking',
@@ -69,7 +79,7 @@ export default function SelectedWork() {
           </div>
         </div>
 
-        {/* 3 Projects Grid */}
+        {/* Projects Grid */}
         <div className="projects-grid" id="projects-container">
           {PROJECTS.map((project) => (
             <div

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatIDo from './components/WhatIDo';
@@ -6,18 +6,12 @@ import Experience from './components/Experience';
 import SelectedWork from './components/SelectedWork';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import ThemeSwitcher from './components/ThemeSwitcher';
 
 export default function App() {
   const [developerName] = useState('RAMA MAZEN');
-  const [theme, setTheme] = useState('new-colors');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
 
   return (
-    <div className="page-wrapper" data-theme={theme}>
+    <div className="page-wrapper">
       <Navbar />
       <main>
         <Hero name={developerName} />
@@ -27,7 +21,7 @@ export default function App() {
         <ContactSection />
       </main>
       <Footer />
-      <ThemeSwitcher currentTheme={theme} setTheme={setTheme} />
     </div>
   );
 }
+
