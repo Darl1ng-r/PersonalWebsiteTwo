@@ -1,5 +1,5 @@
 import React from 'react';
-import { Asterisk, Sparkles, Smile } from 'lucide-react';
+import { Asterisk, Smile } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function Navbar() {

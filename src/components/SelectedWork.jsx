@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, X, ExternalLink, Sparkles } from 'lucide-react';
+import { ArrowUpRight, X, ExternalLink } from 'lucide-react';
 import { GithubIcon } from './Icons';
 
 const PROJECTS = [
@@ -97,12 +97,18 @@ export default function SelectedWork() {
               }}
             >
               <div className="project-img-wrapper">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="project-img"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcSet={project.image.replace('.jpg', '.webp')} type="image/webp" />
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="project-img"
+                    loading="lazy"
+                    decoding="async"
+                    width="300"
+                    height="188"
+                  />
+                </picture>
               </div>
 
               <div className="project-info-row">
@@ -178,11 +184,15 @@ export default function SelectedWork() {
             }}
           >
             <div style={{ position: 'relative', borderBottom: 'var(--border-solid)' }}>
-              <img
-                src={activeModalProject.image}
-                alt={activeModalProject.name}
-                style={{ width: '100%', height: '280px', objectFit: 'cover' }}
-              />
+              <picture>
+                <source srcSet={activeModalProject.image.replace('.jpg', '.webp')} type="image/webp" />
+                <img
+                  src={activeModalProject.image}
+                  alt={activeModalProject.name}
+                  style={{ width: '100%', height: '280px', objectFit: 'cover' }}
+                  decoding="async"
+                />
+              </picture>
               <button
                 onClick={closeProjectModal}
                 style={{

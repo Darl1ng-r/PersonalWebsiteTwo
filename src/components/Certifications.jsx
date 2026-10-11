@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, CheckCircle2, Cloud, Terminal, Cpu, Sparkles, BookOpen, Layers, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Cloud, Terminal, Cpu, Sparkles, BookOpen, Layers } from 'lucide-react';
 
 const CERTIFICATIONS = [
   {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Globe, MapPin, Copy, Check, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin, Copy, Check, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';
 import confetti from 'canvas-confetti';
 

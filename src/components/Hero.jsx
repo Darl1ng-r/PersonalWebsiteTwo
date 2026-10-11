@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Zap, Sparkles, Plus } from 'lucide-react';
+import { Globe, Zap, Plus } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function Hero({ name = "RAMA MAZEN" }) {
@@ -74,12 +74,19 @@ export default function Hero({ name = "RAMA MAZEN" }) {
 
             {/* Portrait Frame */}
             <div className="hero-portrait-card">
-              <img
-                src="/assets/hero_portrait.jpg"
-                alt={`${name} - Software Engineer`}
-                className="hero-portrait-img"
-                id="hero-portrait"
-              />
+              <picture>
+                <source srcSet="/assets/hero_portrait.webp" type="image/webp" />
+                <img
+                  src="/assets/hero_portrait.jpg"
+                  alt={`${name} - Software Engineer`}
+                  className="hero-portrait-img"
+                  id="hero-portrait"
+                  width="380"
+                  height="380"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+              </picture>
             </div>
 
             {/* Floating Superpower Badge */}

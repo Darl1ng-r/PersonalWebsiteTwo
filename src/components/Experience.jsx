@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase, GraduationCap, Calendar, MapPin, Sparkles, ChevronRight, CheckCircle2, Award } from 'lucide-react';
+import { Briefcase, GraduationCap, Calendar, MapPin, Sparkles, ChevronRight, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 const EXPERIENCES = [
