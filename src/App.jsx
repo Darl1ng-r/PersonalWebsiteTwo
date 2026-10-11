@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatIDo from './components/WhatIDo';
 import Experience from './components/Experience';
-import Certifications from './components/Certifications';
 import SelectedWork from './components/SelectedWork';
+import Certifications from './components/Certifications';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -18,8 +18,8 @@ export default function App() {
         <Hero name={developerName} />
         <WhatIDo />
         <Experience />
-        <Certifications />
         <SelectedWork />
+        <Certifications />
         <ContactSection />
       </main>
       <Footer />
