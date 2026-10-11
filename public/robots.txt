@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ramamazen.dev/sitemap.xml
+Sitemap: https://ramamazenportfolio.netlify.app/sitemap.xml

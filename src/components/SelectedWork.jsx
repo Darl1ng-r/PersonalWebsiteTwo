@@ -175,8 +175,9 @@ export default function SelectedWork() {
               borderRadius: 'var(--radius-lg)',
               maxWidth: '680px',
               width: '100%',
+              maxHeight: '92vh',
+              overflowY: 'auto',
               boxShadow: 'var(--shadow-xl)',
-              overflow: 'hidden',
               animation: 'modalSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1)'
             }}
           >
@@ -184,7 +185,7 @@ export default function SelectedWork() {
               <img
                 src={activeModalProject.image}
                 alt={activeModalProject.name}
-                style={{ width: '100%', height: '280px', objectFit: 'cover' }}
+                style={{ width: '100%', height: 'clamp(180px, 32vh, 280px)', objectFit: 'cover' }}
                 decoding="async"
               />
               <button
@@ -210,7 +211,7 @@ export default function SelectedWork() {
               </button>
             </div>
 
-            <div style={{ padding: '2rem' }}>
+            <div style={{ padding: 'clamp(1.25rem, 4vw, 2rem)' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
                 <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: 900, textTransform: 'uppercase' }}>
                   {activeModalProject.name}
