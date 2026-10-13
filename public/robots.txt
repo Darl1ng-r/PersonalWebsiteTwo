@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ramamazenportfolio.rama-tubeh-04.workers.dev/sitemap.xml
+Sitemap: https://darl1ng-r.github.io/PersonalWebsiteTwo/sitemap.xml

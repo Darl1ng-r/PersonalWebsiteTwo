@@ -103,21 +103,16 @@ npm run preview
 
 ---
 
-## 🌐 Deploying to Netlify
+## 🌐 Deploying to GitHub Pages
 
-This project is pre-configured for zero-config, one-click deployment on Netlify:
+This project includes a native GitHub Actions workflow (`.github/workflows/deploy.yml`) for automated deployments:
 
-1. **Push to GitHub**: Commit and push your changes to your repository.
-2. **Import to Netlify**:
-   - Go to [Netlify Dashboard](https://app.netlify.com/) and click **Add new site > Import an existing project**.
-   - Select your GitHub repository (`PersonalWebsiteTwo`).
-3. **Build Settings**:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-   *(These are automatically picked up from [`netlify.toml`](file:///home/darling/Downloads/Project-Related/PersonalWebsiteTwo/netlify.toml))*
-4. **Deploy Site**: Click **Deploy site**.
-
-Netlify will automatically build and publish your site with HSTS, CSP security headers, SPA redirects, and caching configured.
+1. **Enable GitHub Pages**:
+   - In your repository on GitHub, go to **Settings** > **Pages** (under the "Code and automation" section).
+   - Under **Build and deployment > Source**, select: **GitHub Actions**.
+2. **Push to main**:
+   - Every push to `main` will automatically build and deploy the portfolio to:
+   - 👉 **`https://darl1ng-r.github.io/PersonalWebsiteTwo/`**
 
 ---
 
@@ -125,4 +120,4 @@ Netlify will automatically build and publish your site with HSTS, CSP security h
 
 **Rama Mazen**
 - GitHub: [@Darl1ng-r](https://github.com/Darl1ng-r)
-- Portfolio: [ramamazen.dev](https://ramamazen.dev)
+- Live Portfolio: [darl1ng-r.github.io/PersonalWebsiteTwo](https://darl1ng-r.github.io/PersonalWebsiteTwo/)

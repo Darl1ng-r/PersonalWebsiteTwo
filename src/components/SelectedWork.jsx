@@ -8,7 +8,7 @@ const PROJECTS = [
     name: 'ANTI-MONEY LAUNDERING SYSTEM',
     category: 'Enterprise AML & Compliance Platform',
     tags: ['Python', 'FastAPI', 'Neo4j', 'PostgreSQL', 'Redis', 'Kafka'],
-    image: '/assets/project_aml_sentinel.webp',
+    image: './assets/project_aml_sentinel.webp',
     description: 'An enterprise-grade Anti-Money Laundering (AML) transaction monitoring and regulatory compliance platform. Combines real-time deterministic rule evaluation (<50ms latency), behavioral machine learning anomaly scoring (Isolation Forest), Neo4j graph topology intelligence for detecting circular fund loops and money mule networks, and automated FinCEN SAR regulatory filing.',
     liveUrl: 'https://github.com/Darl1ng-r/aml_system',
     codeUrl: 'https://github.com/Darl1ng-r/aml_system'
@@ -18,7 +18,7 @@ const PROJECTS = [
     name: 'THROUGHLINES',
     category: 'Epistemic Reasoning & Belief Tracking',
     tags: ['React 18', 'Vite', 'Supabase', 'PostgreSQL', 'Recharts'],
-    image: '/assets/project_throughlines.webp',
+    image: './assets/project_throughlines.webp',
     description: 'An epistemic reasoning laboratory designed to capture cognitive trajectories and belief evolution over time. Features subjective conviction tracking with 0–100% certainty curves, structured epistemic shift attribution (counter-arguments, empirical data, value shifts), offline-first IndexedDB persistence, and Supabase PostgreSQL synchronization.',
     liveUrl: 'https://github.com/Darl1ng-r/ThroughLines',
     codeUrl: 'https://github.com/Darl1ng-r/ThroughLines'
@@ -28,7 +28,7 @@ const PROJECTS = [
     name: 'ARGUS',
     category: 'Directed Argument Mapping Platform',
     tags: ['React 18', 'Cytoscape.js', 'TypeScript', 'Express', 'Prisma'],
-    image: '/assets/project_argus.webp',
+    image: './assets/project_argus.webp',
     description: 'A visual debate mapping engine transforming chaotic linear comment threads into structured directed graphs. Maps atomic claim nodes and evaluates logical relationship edges (Supports, Refutes, Clarifies, Requires Evidence), computing graph topology to reveal unrebutted dead ends, central hub claims, and true points of convergence.',
     liveUrl: 'https://github.com/Darl1ng-r/Argus',
     codeUrl: 'https://github.com/Darl1ng-r/Argus'
@@ -38,7 +38,7 @@ const PROJECTS = [
     name: 'JORDAN IT JOBS PORTAL',
     category: 'Tech Market Intelligence & Scraper',
     tags: ['Python', 'Streamlit', 'BeautifulSoup4', 'Plotly', 'Pandas'],
-    image: '/assets/project_jordan_jobs.webp',
+    image: './assets/project_jordan_jobs.webp',
     description: 'An automated market intelligence portal and job scraper monitoring the tech employment landscape across Jordan. Tracks software engineering vacancies, role domain salary distributions, skill demand trends (Frontend, Backend, DevOps, AI), and remote/hybrid opportunities with interactive analytical dashboards and scheduled scrapers.',
     liveUrl: 'https://github.com/Darl1ng-r/jordan-it-jobs-portal',
     codeUrl: 'https://github.com/Darl1ng-r/jordan-it-jobs-portal'

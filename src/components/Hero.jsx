@@ -75,7 +75,7 @@ export default function Hero({ name = "RAMA MAZEN" }) {
             {/* Portrait Frame */}
             <div className="hero-portrait-card">
               <img
-                src="/assets/hero_portrait.webp"
+                src="./assets/hero_portrait.webp"
                 alt={`${name} - Software Engineer`}
                 className="hero-portrait-img"
                 id="hero-portrait"
