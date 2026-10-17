@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, Layers, Layout, Gauge, Heart } from 'lucide-react';
+import { Terminal, Layers, Layout, Gauge, Cpu } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 const SERVICES = [
@@ -62,12 +62,12 @@ export default function WhatIDo() {
               className="stamp-badge"
               onClick={triggerStampConfetti}
               title="Click me!"
-              id="clean-code-stamp-badge"
-              aria-label="Clean code equals great products interactive stamp"
+              id="performance-stamp-badge"
+              aria-label="Designed to scale and high performance interactive stamp"
             >
-              <span className="stamp-badge__text">CLEAN CODE</span>
-              <Heart size={20} fill="#ffffff" strokeWidth={1} className="stamp-badge__icon" />
-              <span className="stamp-badge__text">GREAT PRODUCTS</span>
+              <span className="stamp-badge__text">DESIGNED TO SCALE</span>
+              <Cpu size={22} strokeWidth={2.25} className="stamp-badge__icon" />
+              <span className="stamp-badge__text">HIGH PERFORMANCE</span>
             </button>
           </div>
 
