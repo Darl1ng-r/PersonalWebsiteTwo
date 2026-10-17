@@ -61,13 +61,33 @@ export default function WhatIDo() {
             <button
               className="stamp-badge"
               onClick={triggerStampConfetti}
-              title="Click me!"
+              title="Click for a burst of energy!"
               id="performance-stamp-badge"
               aria-label="Designed to scale and high performance interactive stamp"
             >
-              <span className="stamp-badge__text">DESIGNED TO SCALE</span>
-              <Cpu size={22} strokeWidth={2.25} className="stamp-badge__icon" />
-              <span className="stamp-badge__text">HIGH PERFORMANCE</span>
+              <svg viewBox="0 0 140 140" className="stamp-badge__svg" aria-hidden="true">
+                <defs>
+                  {/* Top arc from 9 o'clock to 3 o'clock */}
+                  <path id="stamp-top-arc" d="M 23,70 A 47,47 0 0,1 117,70" fill="none" />
+                  {/* Bottom arc from 3 o'clock to 9 o'clock */}
+                  <path id="stamp-bottom-arc" d="M 117,70 A 47,47 0 0,1 23,70" fill="none" />
+                </defs>
+                <text className="stamp-badge__svg-text">
+                  <textPath href="#stamp-top-arc" startOffset="50%" textAnchor="middle">
+                    DESIGNED TO SCALE
+                  </textPath>
+                </text>
+                <text className="stamp-badge__svg-text">
+                  <textPath href="#stamp-bottom-arc" startOffset="50%" textAnchor="middle">
+                    HIGH PERFORMANCE
+                  </textPath>
+                </text>
+                <text x="21" y="70" textAnchor="middle" className="stamp-badge__star" aria-hidden="true">✦</text>
+                <text x="119" y="70" textAnchor="middle" className="stamp-badge__star" aria-hidden="true">✦</text>
+              </svg>
+              <div className="stamp-badge__center-icon">
+                <Cpu size={24} strokeWidth={2.2} />
+              </div>
             </button>
           </div>
 

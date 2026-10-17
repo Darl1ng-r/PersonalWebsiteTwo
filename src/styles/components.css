@@ -73,26 +73,25 @@
   color: #ffffff;
 }
 
-/* Big Circular Stamp Badge ("DESIGNED TO SCALE / HIGH PERFORMANCE") */
+/* Big Circular Stamp Badge ("DESIGNED TO SCALE ✦ HIGH PERFORMANCE") */
 .stamp-badge {
   position: relative;
-  width: 114px;
-  height: 114px;
+  width: 132px;
+  height: 132px;
   border-radius: 50%;
   background: var(--theme-stamp);
   color: #ffffff;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   border: var(--border-solid);
   box-shadow: var(--shadow-md);
   transform: rotate(-6deg);
-  animation: floatStamp 6s ease-in-out infinite alternate;
   user-select: none;
   cursor: pointer;
   transition: transform var(--transition-bounce), box-shadow var(--transition-bounce);
+  padding: 0;
+  overflow: visible;
 }
 
 .stamp-badge:hover {
@@ -100,24 +99,66 @@
   box-shadow: var(--shadow-lg);
 }
 
-@keyframes floatStamp {
-  0% { transform: translateY(0px) rotate(-6deg); }
-  100% { transform: translateY(-8px) rotate(-3deg); }
+.stamp-badge__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotateStampText 24s linear infinite;
+  pointer-events: none;
+  transform-origin: center center;
 }
 
-.stamp-badge__text {
+@keyframes rotateStampText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-badge__svg {
+    animation: none;
+  }
+}
+
+.stamp-badge__svg-text {
   font-family: var(--font-body);
-  font-size: 0.58rem;
+  font-size: 9.5px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.15;
-  white-space: nowrap;
-  padding: 0 0.35rem;
+  letter-spacing: 0.12em;
+  fill: #ffffff;
 }
 
-.stamp-badge__icon {
-  margin: 0.25rem 0;
+.stamp-badge__star {
+  font-size: 11px;
+  fill: #ffffff;
+  dominant-baseline: central;
+}
+
+.stamp-badge__center-icon {
+  position: relative;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  pointer-events: none;
+}
+
+.stamp-badge:hover .stamp-badge__center-icon {
+  transform: scale(1.12);
+  background-color: rgba(255, 255, 255, 0.26);
 }
 
 /* Washi Tape Badge (e.g. "A few projects I'm proud of") */
