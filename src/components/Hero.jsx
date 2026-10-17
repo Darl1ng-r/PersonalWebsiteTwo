@@ -86,16 +86,16 @@ export default function Hero({ name = "RAMA MAZEN" }) {
               />
             </div>
 
-            {/* Floating Superpower Badge */}
+            {/* Floating Badge on Photo */}
             <button
               className="hero-floating-sticker"
               onClick={triggerSuperpowerConfetti}
               title="Click for a burst of energy!"
               id="hero-superpower-badge"
-              aria-label="Code is my superpower interactive sticker"
+              aria-label="Full-Stack Architect interactive sticker"
             >
               <Zap size={20} strokeWidth={2.5} fill="#ffffff" />
-              <span>CODE IS MY SUPERPOWER</span>
+              <span>FULL-STACK ARCHITECT</span>
             </button>
           </div>
         </div>
